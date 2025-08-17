@@ -45,7 +45,7 @@ const DesignDetails: React.FC = () => {
     console.log(data);
 
     try {
-      const res = await fetch(`${import.meta.env.VITE_BACKEND_BASE_URL}/submit-interior-design`, {
+      const res = await fetch(`http://13.232.127.216:3000/submit-interior-design`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

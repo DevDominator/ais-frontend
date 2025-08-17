@@ -43,7 +43,7 @@ const PropertyDetails = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const res = await fetch(`${import.meta.env.VITE_BACKEND_BASE_URL}/api/v1/properties/`);
+        const res = await fetch(`http://13.232.127.216:3000/api/v1/properties/`);
         const data = await res.json();
         console.log(data);
         

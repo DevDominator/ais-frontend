@@ -25,9 +25,9 @@ const BuilderList = () => {
     const fetchBuilders = async () => {
       setLoading(true);
       try {
-        console.log(`${import.meta.env.VITE_BACKEND_BASE_URL}/api/v1/builders`);
+        console.log(`http://13.232.127.216:3000/api/v1/builders`);
         
-        const res = await fetch(`${import.meta.env.VITE_BACKEND_BASE_URL}/api/v1/builders`);
+        const res = await fetch(`http://13.232.127.216:3000/api/v1/builders`);
         const data = await res.json();
         setBuilders(data.builders);
       } catch (error) {
