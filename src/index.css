@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: auto !important;
+}
+
+/* Smaller and repositioned Swiper navigation arrows */
+.custom-swiper-prev,
+.custom-swiper-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: white;
+  border-radius: 9999px; /* Fully rounded */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  padding: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-swiper-prev:hover,
+.custom-swiper-next:hover {
+  background-color: #60A5FA !important; 
+}
+
+.custom-swiper-prev {
+  left: 0;
+}
+
+.custom-swiper-next {
+  right: 0;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0 50px 0;
+  background: #fff;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 40s linear infinite;
+}
+
+.carousel-track img {
+  height: 60px;
+  margin-right: 40px;
+  flex-shrink: 0;
+  object-fit: contain;
+  display: block;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* Custom styles for Slick carousel */
+.slick-dots {
+  bottom: 25px !important;
+}
+
+.slick-dots li button:before {
+  color: white !important;
+  font-size: 12px !important;
+  opacity: 0.5;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+}
+
+/* Testimonials slider customization */
+.testimonials-slider .slick-dots {
+  bottom: -40px !important;
+}
+
+.testimonials-slider .slick-dots li button:before {
+  color: #1e40af !important;
+}
+
+/* Hide default slick arrows */
+.slick-prev,
+.slick-next {
+  display: none !important;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
