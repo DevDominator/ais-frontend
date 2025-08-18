@@ -2,7 +2,7 @@ import { showAlert } from "../utils/Alerts";
 
 export const addBuilder = async (data: any) => {
     try {
-        const resp = await fetch(`http://13.232.127.216:3000/api/v1/Builders/`, {
+        const resp = await fetch(`http://65.0.19.141:3000/api/v1/Builders/`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -32,7 +32,7 @@ export const addBuilder = async (data: any) => {
 
 export const fetchBuilders = async () => {
     try {
-        const resp = await fetch(`http://13.232.127.216:3000/api/v1/Builders/`);
+        const resp = await fetch(`http://65.0.19.141:3000/api/v1/Builders/`);
 
         await new Promise(resolve => setTimeout(resolve, 2000));
 
@@ -54,7 +54,7 @@ export const fetchBuilders = async () => {
 
 export const deleteBuilder = async (id: any) => {
     try {
-        const resp = await fetch(`http://13.232.127.216:3000/api/v1/builders/${id}`, {
+        const resp = await fetch(`http://65.0.19.141:3000/api/v1/builders/${id}`, {
             method: "DELETE"
         });
 

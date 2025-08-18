@@ -36,7 +36,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const res = await fetch(`http://13.232.127.216:3000/api/v1/auth/current`, { credentials: 'include' });
+        const res = await fetch(`http://65.0.19.141:3000/api/v1/auth/current`, { credentials: 'include' });
         console.log(res);
 
         if (!res.ok) throw new Error();
@@ -56,7 +56,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const login = async (email: string, password: string) => {
     try {
-      const response = await fetch(`http://13.232.127.216:3000/api/v1/auth/login`, {
+      const response = await fetch(`http://65.0.19.141:3000/api/v1/auth/login`, {
         method: 'POST',
         credentials: 'include',
         headers: {
@@ -74,7 +74,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       }
 
       // Optional: fetch user info from another endpoint
-      const userData = await fetch(`http://13.232.127.216:3000/api/v1/auth/current`, { credentials: 'include' });
+      const userData = await fetch(`http://65.0.19.141:3000/api/v1/auth/current`, { credentials: 'include' });
       const user: any = await userData.json();
       console.log(user);
 
@@ -96,7 +96,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const logout = async () => {
     try {
-      const response = await fetch(`http://13.232.127.216:3000/api/v1/auth/logout`, {
+      const response = await fetch(`http://65.0.19.141:3000/api/v1/auth/logout`, {
         method: 'POST',
         credentials: 'include',
       });

@@ -45,7 +45,7 @@ const BuilderForm: React.FC<BuilderFormProps> = ({ builder }) => {
     setUploadProgress(newProgress);
 
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', `http://13.232.127.216:3000/api/v1/upload/cloudinary`);
+    xhr.open('POST', `http://65.0.19.141:3000/api/v1/upload/cloudinary`);
 
     xhr.upload.onprogress = (event) => {
       if (event.lengthComputable) {

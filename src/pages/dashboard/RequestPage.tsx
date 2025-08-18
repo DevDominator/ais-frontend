@@ -21,7 +21,7 @@ const RequestPage: React.FC = () => {
   useEffect(() => {
     const fetchContacts = async () => {
       try {
-        const res = await fetch(`http://13.232.127.216:3000/api/v1/logs`);
+        const res = await fetch(`http://65.0.19.141:3000/api/v1/logs`);
         const data: Contact[] = await res.json();
         await new Promise(resolve => setTimeout(resolve, 2000));
         setContacts(data);

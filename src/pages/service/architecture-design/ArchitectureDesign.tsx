@@ -96,7 +96,7 @@ const ArchitectureDesign: React.FC = () => {
     };
 
     try {
-      const res = await fetch(`http://13.232.127.216:3000/submit-architecture-design`, {
+      const res = await fetch(`http://65.0.19.141:3000/submit-architecture-design`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

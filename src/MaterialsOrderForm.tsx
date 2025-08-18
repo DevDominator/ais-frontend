@@ -452,7 +452,7 @@ const ConstructionMaterialsForm: React.FC = () => {
     console.log(JSON.stringify(data, null, 2));
 
     try {
-      const res = await fetch(`http://13.232.127.216:3000/submit-material-order`, {
+      const res = await fetch(`http://65.0.19.141:3000/submit-material-order`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -638,7 +638,7 @@ const ConstructionMaterialsForm: React.FC = () => {
                                 setUploadProgress(prev => ({ ...prev, [globalIndex]: 0 }));
 
                                 const xhr = new XMLHttpRequest();
-                                xhr.open("POST", `http://13.232.127.216:3000/api/v1/upload/`);
+                                xhr.open("POST", `http://65.0.19.141:3000/api/v1/upload/`);
 
                                 xhr.upload.onprogress = (event) => {
                                   if (event.lengthComputable) {

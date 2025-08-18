@@ -492,7 +492,7 @@ const MultipleQuote = () => {
 
     console.log(data);
 
-    await fetch(`http://13.232.127.216:3000/submit-quote`, {
+    await fetch(`http://65.0.19.141:3000/submit-quote`, {
       method: 'POST',
       headers: new Headers({
         'Content-Type': 'application/json',

@@ -37,7 +37,7 @@ const Navbar = () => {
     setLoading(true);
     
     try {
-      const res = await fetch(`http://13.232.127.216:3000/submit-contact-details`, {
+      const res = await fetch(`http://65.0.19.141:3000/submit-contact-details`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
